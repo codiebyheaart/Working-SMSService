@@ -245,7 +245,7 @@ public class SMSServices {
 			Scheme scheme=new Scheme("https",443,sf);
 			HttpClient client=new DefaultHttpClient();
 			client.getConnectionManager().getSchemeRegistry().register(scheme);
-			HttpPost post=new HttpPost("https://msdgweb.mgov.gov.in/esms/sendsmsrequestDLT");
+			HttpPost post=new HttpPost("");
 			encryptedPassword  = MD5(password);
 			String genratedhashKey = hashGenerator(username, senderId, message, secureKey);
 			List<NameValuePair> nameValuePairs=new ArrayList<NameValuePair>(1);
